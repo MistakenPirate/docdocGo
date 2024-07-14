@@ -1,6 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import React from "react";
-import IntroPage from "./intropage";
+import IntroPage from "./intro-page";
+import { NewDocument } from "./new-document";
 
 const Dashboard = () => {
   const { userId } = auth();
@@ -10,6 +11,7 @@ const Dashboard = () => {
   return (
     <div>
       {/* new docs*/}
+      <NewDocument/>
       {/* recent docs */}
     </div>
   );
