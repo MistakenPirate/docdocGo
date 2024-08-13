@@ -1,20 +1,26 @@
-"use client"
+"use client";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import { Plus } from "lucide-react";
 import axios from "axios";
+import { useToast } from "./ui/use-toast";
+import { useRouter } from "next/navigation";
 
 export const NewDocument = () => {
-  const createNewDoc = async ()=>{
+  const router = useRouter();
+  const { toast } = useToast();
+  const createNewDoc = async () => {
     try {
-      const res = await axios.post("/api/document/new")
-    } catch (e) {
-      
-    }
-  }
+      const res = await axios.post("/api/document/new");
+      toast({
+        title: "Document Successfully Created",
+      });
+      router.push(`/document/${res.data.id}`);
+    } catch (e) {}
+  };
   const TemplateMap = [
     {
       component: (
-        <button onClick={()=>createNewDoc()}>
+        <button onClick={() => createNewDoc()}>
           <Card className="w-[150px] hover:border hover:border-blue-500 hover:cursor-pointer">
             <CardHeader />
             <CardContent className="flex justify-center mx-auto">

@@ -1,0 +1,33 @@
+// import OpenAI from "openai";
+// import { env } from "process";
+
+// const openai = new OpenAI({
+//   apiKey:
+//     "apikeystring",
+//   dangerouslyAllowBrowser: true,
+// });
+
+// export async function openAI(description: string) {
+//   const response = await openai.chat.completions.create({
+//     messages: [
+//       {
+//         role: "system",
+//         content:
+//           "I need help writing about the description i provided, suggest me some ideas about it",
+//       },
+//       {
+//         role: "user",
+//         content: JSON.stringify({
+//           description: [description],
+//         }),
+//       },
+//     ],
+//     model: "gpt-3.5-turbo",
+//   });
+
+//   const messageContent = response.choices[0].message?.content;
+
+//   if (messageContent) {
+//     return messageContent;
+//   }
+// }

@@ -18,7 +18,8 @@ export default function IntroPage() {
                 Unlock Your Writing Potential 🪶
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Discover how our cutting-edge products and services can transform your writing with the power of AI
+                Your documents, de-cluttered and de-stressed! Think of it as the
+                KonMari method for your files—spark joy with every tap!
               </p>
               <Link
                 href="#"

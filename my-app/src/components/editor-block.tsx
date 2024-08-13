@@ -66,7 +66,7 @@ const EditorBlock: React.FC<EditorBlockProps> = ({ document }) => {
 
   async function onDocumentDelete() {
     try {
-      await axios.delete("/api/document" + document?.id);
+      await axios.delete("/api/document/" + document?.id);
       toast({ title: "Document Deleted Successfully" });
     } catch (error) {
       console.log(error);
@@ -76,7 +76,7 @@ const EditorBlock: React.FC<EditorBlockProps> = ({ document }) => {
   return (
     <div className="px-4">
       <div className="flex float-right my-2 space-x-4">
-        <DrawerAI/>
+        <DrawerAI description={document.description} />
         <form onSubmit={onDocumentDelete} className="flex float-right">
           <Button type="submit" variant={"destructive"}>
             Delete
