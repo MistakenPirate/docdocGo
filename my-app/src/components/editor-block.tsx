@@ -20,7 +20,7 @@ import Editor from "./editor";
 import { Button } from "./ui/button";
 import { revalidatePath } from "next/cache";
 import { useToast } from "./ui/use-toast";
-import DrawerAI from "./drawer-ai";
+// import DrawerAI from "./drawer-ai";
 
 const FormSchema = z.object({
   title: z.string().min(2).max(50),
